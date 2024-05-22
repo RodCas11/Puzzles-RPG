@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle do Relógio Astronômico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="puzzle">
+        <div id="clock">
+            <div id="clock-face">
+                <img src="images/clock-face.png" alt="Clock Face">
+            </div>
+            <div id="constellation-hand" class="hand"></div>
+            <div id="planet-hand" class="hand"></div>
+            <div id="alchemy-hand" class="hand"></div>
+            <div id="center-point"></div>
+        </div>
+        <div id="buttons">
+            <button onclick="rotateHand('constellation')">Girar Constelação</button>
+            <button onclick="rotateHand('planet')">Girar Planeta</button>
+            <button onclick="rotateHand('alchemy')">Girar Alquimia</button>
+        </div>
+        <button onclick="checkSolution()">Verificar Solução</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

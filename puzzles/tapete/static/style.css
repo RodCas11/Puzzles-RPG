@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.background {
+    position: relative;
+}
+
+.pedestal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pedestal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#pedestal1 { top: 17%; left: 22%; }
+#pedestal2 { top: 4%; left: 45%; }
+#pedestal3 { top: 17%; left: 68%; }
+#pedestal4 { top: 72%; left: 45%; }
+
+.symbols {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adiciona margem inferior para espaço */
+}
+
+.symbol {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    cursor: grab;
+}
+
+.symbol img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#check {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* Altera a posição relativa */
+}
+.hidden {
+    display: none;
+}

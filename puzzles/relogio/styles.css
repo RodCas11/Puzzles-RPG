@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#puzzle {
+    text-align: center;
+}
+
+#clock {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}
+
+#clock-face img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hand {
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%; /* Pivô de rotação na ponta esquerda */
+    transform: rotate(270deg);
+}
+
+#constellation-hand {
+    background-color: red; /* Cor do ponteiro de constelação */
+    height: 6px;
+}
+
+#planet-hand {
+    background-color: blue; /* Cor do ponteiro de planeta */
+    height: 8px;
+}
+
+#alchemy-hand {
+    background-color: green; /* Cor do ponteiro de alquimia */
+    height: 10px;
+}
+
+#center-point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+#buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: #0056b3;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}

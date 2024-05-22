@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .background {
+            position: relative;
+            width: 1024px;
+            height: 720px;
+            background-image: url('{{ url_for('static', filename='images/background.png') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="pedestal" id="pedestal1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="pedestal" id="pedestal2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="pedestal" id="pedestal3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="pedestal" id="pedestal4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="symbols">
+        <div class="symbol" draggable="true" id="obj1" ondragstart="drag(event)">
+            <img src="{{ url_for('static', filename='images/object1.png') }}" id="img1" alt="Objeto 1">
+        </div>
+        <div class="symbol" draggable="true" id="obj2" ondragstart="drag(event)">
+            <img src="{{ url_for('static', filename='images/object2.png') }}" id="img2" alt="Objeto 2">
+        </div>
+        <div class="symbol" draggable="true" id="obj3" ondragstart="drag(event)">
+            <img src="{{ url_for('static', filename='images/object3.png') }}" id="img3" alt="Objeto 3">
+        </div>
+        <div class="symbol" draggable="true" id="obj4" ondragstart="drag(event)">
+            <img src="{{ url_for('static', filename='images/object4.png') }}" id="img4" alt="Objeto 4">
+        </div>
+    </div>
+    </div>
+    <img id="correctImage" class="hidden" src="{{ url_for('static', filename='images/correct_combination.png') }}" alt="Correct Combination">
+    <button id="check" onclick="checkConfiguration()">Verificar</button>
+
+    <!-- Elementos de áudio -->
+    <audio id="placeSound" src="{{ url_for('static', filename='sounds/place_object.mp3') }}"></audio>
+    <audio id="correctSound" src="{{ url_for('static', filename='sounds/correct_answer.mp3') }}"></audio>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
